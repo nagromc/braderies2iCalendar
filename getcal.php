@@ -97,7 +97,6 @@ function getSources($listeSourcesSupportees) {
 		}
 	}
 	
-	var_dump($listeRetour);
 	return $listeRetour;
 }
 
