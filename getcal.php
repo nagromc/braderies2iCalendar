@@ -17,7 +17,7 @@ $SOURCES = array(
 			array(
 				"nomSite" => "sabradou.com",
 				"pattern" => "#^\d{2}-.+?/[a-z]/.+?$#"
-			)59
+			)
 );
 
 const SEPARATEUR_SOURCE = "|";
@@ -148,7 +148,7 @@ if (isset($_GET["debug"])) {
 	$vcal = new vcalendar( array("unique_id" => "[".implode(',', $sourcesEnteteICal)."]") );
 	foreach ($listeEvt as $evmt) {
 		$event = &$vcal->newComponent("vevent");
-		// s'il la date de fin n'est pas positionnée
+		// si la date de fin n'est pas positionnée
 		if ($evmt->dateFin == 0) {
 			// on déclare l'évènement comme un évènement à la journée
 			$event->setProperty("dtstart", array("timestamp" => $evmt->dateDebut, "tz" => "Europe/Paris"), array("VALUE" => "DATE"));

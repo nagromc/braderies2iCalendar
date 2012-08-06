@@ -75,7 +75,7 @@ class Evenement {
 
 /**
  * <p>
- * Classe abstraire dont doivent hériter les parsers de chacun des sites à
+ * Classe abstraite dont doivent hériter les parsers de chacun des sites à
  * analyser.
  * 
  * <p>
@@ -85,20 +85,7 @@ class Evenement {
 abstract class AbstractHTMLParser {
 	
 	/** L'URL de la page contenant les informations à extraire. */
-	protected $url = null;public function __get($property) {
-		if (property_exists($this, $property)) {
-			return $this->$property;
-		}
-	}
-
-	public function __set($property, $value) {
-		if (property_exists($this, $property)) {
-			$this->$property = $value;
-		}
-		
-		return $this;
-	}
- 	
+	protected $url = null;
 	
 	/** L'expression XPath permettant d'extraire les informations dont on a besoin. */
  	protected $xpath = null;
